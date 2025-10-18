@@ -1,0 +1,762 @@
+/* CSS3 é o Inferno */
+
+/* Definições De Ambiente */
+
+/* Reset predefinido*/
+*{
+    /* Definição Do Bloco */
+    max-width: 100%; 
+    max-height: 100%; 
+    box-sizing: border-box;
+    margin: 0;
+    
+    /* Definição Do Conteúdo */
+    padding: 0;
+    min-width: 0;
+    min-height: 0;
+
+    /* Conteúdo */
+    color: white;
+}
+
+/* Sem drag'n'drop */
+* {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+
+/* Sem seleção de texto */
+* {
+    user-select: none;        
+    -webkit-user-select: none;
+    -moz-user-select: none;    
+    -ms-user-select: none;     
+}
+
+/* Tema de Cor, pensar em accent colors */
+:root{
+    /* Cores Globais */
+    --cor-normal:#1875E8;
+    --cor-perigo:red;
+}
+
+/* Definições De Blocos */
+body {
+    /* Disposição Do Bloco */
+    display: flex;
+    height: 100vh;
+    
+    /* Disposição Do Conteúdo */
+    /* flex-wrap: wrap; */                             /* Quebra da linha */
+
+    align-items: center;                          /* Disposição Relativa */
+    justify-content: center;                      /* Disposição Relativa */
+    
+    /* Conteúdo */
+    background: linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%);
+}
+
+body::before {
+    /* Disposição Do Bloco */
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+
+    /* Conteúdo */
+    background-image: url("img/code.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    content: "";
+    opacity: 0.4;
+}
+
+.container__question{
+    /* Disposição Do Bloco */
+    display: flex;
+    position: relative;
+    width: 978.9px;           
+    height: 559.69px;            
+}
+
+/* .container__texto-azul {
+    color: #1875E8;
+} */
+
+.container__input {
+    /* Disposição Do Bloco */
+    width: 100%;
+    height: 72px;
+    border-radius: 16px;
+    border: none;
+    box-sizing: border-box; 
+
+    /* Disposição Do Conteúdo*/
+    padding: 1rem;
+    margin-top: 0%;
+    margin-bottom: 5%;
+    
+    /* Conteúdo */
+    background-color: #FFF;
+    color: var(--cor-normal);
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+}
+
+.container__botoes {
+    /* Disposição Do Bloco */
+    display: flex;
+
+    /* Disposição Do Conteúdo */
+    gap: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 0%;
+    padding-top: 0%;
+}
+
+/* TODO Coerência Logica*/
+.container__botao {
+    /* Disposição Do Bloco */
+    flex: 1 1 0; 
+    width: auto;
+    
+    /* Disposição Do Conteúdo */
+    border-radius: 16px;
+    margin-top: 2rem;
+    min-width: 0;
+    padding: 12px 16px;
+    
+    /* Conteúdo */
+    border: none;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.container__botao:enabled{
+   /* Conteúdo */ 
+   background: var(--cor-normal);
+   cursor: pointer;
+}
+.container__botao.perigo{
+   /* Conteúdo */ 
+   background: var(--cor-perigo);
+   cursor:not-allowed;
+}
+
+button {
+    /* Conteúdo */
+    font-family: 'Inter', sans-serif;
+    /* background-color:Black; */
+}
+
+/* Elementos de Texto */
+h1,p {
+    /* Disposição Do Conteúdo*/
+    padding-bottom: 3rem;
+
+    /* Conteúdo */
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 74px;
+}
+
+.texto__paragrafo {
+    /* Disposição Do Bloco */
+    min-height: 80px;
+    max-height: 200px;
+
+    /* Disposição Do Conteúdo */
+    white-space: wrap;
+    flex-shrink: 0;             /* Não deixa encolher */
+    margin: 10px 0;
+    padding: 10px;
+
+    /* Conteúdo*/
+    font-size: 32px;
+    font-weight: 400;
+    
+    border-radius: 8px;
+    /* border: 1px solid rgba(255, 255, 255, 0.1); */
+}
+
+/* button:disabled {
+    background-color: gray;
+} */
+
+/* Container Melhorado*/
+.container {
+    /* Disposição Do Bloco */
+    display: flex;
+    width: 80%;
+    height: 80%;
+
+    /* Disposição Do Conteúdo */
+    box-sizing: border-box;  
+    flex-wrap: wrap;  
+    flex-direction: row;     
+    align-items: stretch;    
+    justify-content: space-between; 
+    padding: 20px;
+    position: relative;            
+
+    /* Conteúdo */
+    border-radius: 24px;  
+
+    box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15);
+    background-image: url("img/Ruido.png");
+    background-size: cover;
+}
+
+.container__conteudo {
+    /* Disposição Do Bloco */
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    /* Disposição Do Conteúdo */
+    flex-wrap: wrap;  
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container__informacoes {
+    /* Disposição Do Bloco */
+    flex: 1;                  
+    max-width: 60%;       
+    padding: 20px;
+    
+    /* Disposição Conteúdo */
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.container__texto {
+    /* Disposição Do Bloco */
+    display: flex;
+    flex: 1;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;    
+    margin: 16px 0 16px 0;
+
+    /* Disposição Do Conteúdo */
+    flex-direction: column;
+    justify-content: flex-start; /* Alinha no topo */
+    padding: 0.5rem;
+    min-height: 0;               /* Permite que encolha */
+    gap: 1rem;
+    
+    /* Conteúdo */
+    font-size: clamp(18px, 4vw, 48px);
+    line-height: 1.2;      
+    overflow-wrap: break-word;            
+    text-align: left;        
+    white-space: normal;                  
+    word-wrap: break-word;                
+}
+
+.texto__paragrafo {
+    /* Disposição do Conteúdo*/
+    flex: 1;
+    padding: 1rem;
+    border-radius: 8px;
+
+    /* Conteúdo */
+    min-height: 120px;
+}
+
+.container__texto h1{
+    /* Disposição Do Conteúdo */
+    margin: 0;
+    line-height: 1.15;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: break-word;
+
+    /* Contúdo */
+    font-size: clamp(18px, 3.5vw, 72px);
+}
+
+.container__texto p{
+    /* Contúdo */
+    font-size: clamp(10px,3.5vw,62px);
+}
+
+/*---------------Adversário------------------------------------------ */
+.robo {
+    /* Disposição Do Bloco */
+    flex: 0 0 35%;     
+    max-width: 35%;
+    max-height: 100%;       
+    width: auto;
+    height: auto;
+    
+    /* Conteúdo */
+    margin-left: auto;      
+    object-fit: contain;
+}
+
+/* Humor do Robo */
+.robo.normal{                                /* Normal */
+  /* Disposição Do Bloco */  
+  display: inline-block;
+
+  /* Conteúdo */
+  /* transform-origin: right left; */
+  animation: roboRage 6.1s infinite ease-in-out;
+  filter: drop-shadow(6px 6px 8px rgba(0,0,0,0.4));
+}
+
+
+/* Vermelho ? */
+.robo.raiva{
+    filter: hue-rotate(-270deg) brightness(1.1) saturate(1.4); 
+}
+
+/* Verde ? */
+.robo.feliz{
+    filter: hue-rotate(-160deg) brightness(1.1) saturate(1.4); 
+} 
+
+/* Balançando */
+.robo.tilte{
+      animation: roboRage 0.1s infinite ease-in-out;
+}
+
+@keyframes roboRage {
+  /* PRIMEIRA METADE: Movimento principal */
+  0%   { transform: translateX(0) rotate(0deg); }
+  50%  { transform: translateX(6px) rotate(2deg); } /* Pico do movimento */
+  
+  /* SEGUNDA METADE: Movimento reverso (espelho) */
+  100% { transform: translateX(0) rotate(0deg); }
+}
+/* Pensando Número de Tentativas, Elemento de Texto */
+.unnh {
+    /* Disposição Do Bloco*/
+    display: inline;
+
+    /* Conteúdo */
+    font-weight: bold;
+}
+
+.unnh::after {
+    /* Conteúdo */
+    content: '?';
+    animation: pensarChances 4s, acenderChances 4s 4s forwards;
+}
+
+@keyframes pensarChances {
+    0%, 25% { opacity: 1; }
+    25.1%, 50% { opacity: 0; }
+    50.1%, 75% { opacity: 1; }
+    75.1%, 100% { opacity: 0; }
+}
+
+@keyframes acenderChances {
+    0%, 24% { opacity: 1; }
+    25%, 49% { opacity: 1; }
+    50%, 74% { opacity: 1; }
+    75%, 99% { opacity: 1; }
+    100% { 
+        opacity: 1;
+        content: attr(data-num);
+    }
+}
+
+/* Firmamento */
+.background {
+    /* Posicionamento */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    
+    /* Fica ATRÁS de tudo */
+    z-index: -9999;
+    
+    /* Garante que cubra toda a tela */
+    margin: 0;
+    padding: 0;
+}
+
+.terra {
+    /* Disposição Do Bloco */
+    position: fixed;
+
+    /* width: 600px;height: 600px; */
+    /* width: var(--size-terra, 70%);        
+    height: var(--size-terra, 70%); */
+
+    width: var(--size-terra, 600px);        
+    height: var(--size-terra, 600px);
+
+    left: var(--pos-left, 80%);
+    top: var(--pos-top, 60%); 
+
+    /* Disposição Do Conteúdo */
+    object-fit: contain;
+    transform: 
+        translate(-50%, -50%)         
+        /* rotate(var(--current-rotation, -4.33deg))*/
+        rotate(
+            calc(
+                var(--min-rotation, 0deg)
+                + (var(--max-rotation, -21.67deg) 
+                - var(--min-rotation, 0deg))
+                * 0.8)
+        )
+        scale(var(--current-scale, 0.95));
+    z-index: -1;
+}
+
+.terra.flash {
+  /* Disposição Do Bloco */   
+    left: var(--pos-left);
+    top: var(--pos-top); 
+
+  /* Conteúdo */
+  background: rgba(255,255,255,0.8);
+  opacity: 0;
+
+  animation: flashEffect var(--actionTime,8s) forwards;
+
+  /* Aplicando a própria imagem como máscara */
+  -webkit-mask-image: url("./img/old/earth.png");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+
+  mask-image: url("./img/old/earth.png");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+ 
+  transform: 
+    translate(-50%, -50%) 
+    rotate(var(--current-rotation, 0deg)) 
+    scale(var(--current-scale, 1));
+
+  pointer-events: none;
+  filter: brightness(100) contrast(99) drop-shadow(0 0 100px white);
+}
+
+@keyframes flashEffect {
+  0% {
+    opacity: 0;
+  }
+    20% {
+    opacity: 1;
+    filter: brightness(4);
+  }
+  50% {
+    opacity: 1;
+    filter: brightness(3);
+}
+  100% {
+    opacity: 0; visibility: hidden;
+}
+}
+
+/* Efeito para Lua */
+.lua {
+    position: fixed;
+    
+    left: calc(var(--pos-left, 240%) / 4);
+    top: calc(var(--pos-top, 60%) / 4); 
+
+    /* width: calc(var(--size-terra, 990px) / 4);
+    height: calc(var(--size-terra, 990px) / 4); */
+
+    object-fit:contain;  
+}
+
+
+.lua_terra {
+    /* Ocupa 100% do background */
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    
+    /* Garante que cubra todo o espaço */
+    top: 20%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    /* Conteúdo */
+    object-fit: cover; /* ou 'contain' dependendo do efeito desejado */
+    
+    /* Animação */
+    /* animation: orbita var(--tempo-orbita, 46s) linear infinite; */
+}
+
+/* ÚNICA animação orbita que funciona para qualquer contexto */
+@keyframes orbita {
+    /* ENTRADA */
+    0% {
+        left: var(--pos-left, 120%);
+        top: var(--pos-top, 20%);
+        transform: 
+            translate(-50%, -50%) 
+            rotate(var(--min-rotacao, 0deg)) 
+            scale(var(--escala-terra, 1));
+    }
+    
+    /* 20% - Ponto inicial visível */
+    20% {
+        left: var(--pos-left, 83.33%);
+        top: var(--pos-top, 20%);
+        transform: 
+            translate(-50%, -50%) 
+            rotate(calc(var(--min-rotacao, 0deg) + -4.33deg)) 
+            scale(calc(var(--escala-terra, 1) * 0.95));
+    }
+    
+    /* 40% - Aproximando centro */
+    40% {
+        left: var(--pos-left, 50%);
+        top: var(--pos-top, 20%);
+        transform: 
+            translate(-50%, -50%) 
+            rotate(calc(var(--min-rotacao, 0deg) + -8.67deg)) 
+            scale(calc(var(--escala-terra, 1) * 0.9));
+    }
+    
+    /* 60% - Centro */
+    60% {
+        left: var(--pos-left, 16.67%);
+        top: var(--pos-top, 20%);
+        transform: 
+            translate(-50%, -50%) 
+            rotate(calc(var(--min-rotacao, 0deg) + -13deg))
+            scale(calc(var(--escala-terra, 1) * 0.85));
+    }
+    
+    /* 80% - Saindo */
+    80% {
+        left: var(--pos-left, -20%);
+        top: var(--pos-top, 20%);
+        transform: 
+            translate(-50%, -50%) 
+            rotate(calc(var(--min-rotacao, 0deg) + -17.33deg))
+            scale(calc(var(--escala-terra, 1) * 0.95));
+    }
+    
+    /* 100% - Fora da tela - rotação final */
+    100% {
+        left: var(--pos-left, -80%);
+        top: var(--pos-top, 20%);
+        transform: 
+            translate(-50%, -50%) 
+            rotate(var(--max-rotacao, -21.67deg)) 
+            scale(var(--escala-terra, 1));
+    }
+}
+
+/* Aplica a ÚNICA animação orbita */
+.terra.orbita {
+    animation: orbita var(--tempo-orbita, 42s) linear infinite;
+}
+
+.lua.orbita {
+    animation: orbita var(--tempo-orbita, 16s) linear infinite;
+}
+
+.lua.pos {
+    animation: orfa var(--actionTime,3s) ease-out forwards;
+
+    left: var(--pos-left, 50%);
+    top: var(--pos-top, 50%);
+    transform: translate(-50%, -50%) rotate(0deg) scale(1);
+}
+
+
+@keyframes orfa {
+    0% {
+        left: var(--pos-left);
+        top: var(--pos-top);
+        transform: 
+            translate(-50%, -50%) 
+            rotate(var(--current-rotation,0deg)) 
+            scale(var(--current-scale,1));
+            opacity: 1;
+        /* filter: brightness(1) contrast(1); */
+    }
+    
+    15% {
+        /* Aceleração inicial + rotação rápida */
+        left: calc(var(--pos-left) - 20%);
+        top: calc(var(--pos-top) - 5%);
+        transform: 
+            translate(-50%, -50%) 
+            rotate(var(--current-rotation,180deg)) 
+            scale(var(--current-scale,1.1)); 
+        opacity: 0.95;
+        /* filter: brightness(1.2) contrast(1.1) blur(0.5px); */
+    }
+    
+    30% {
+        /* Aproximando centro + rotação muito rápida */
+        left: calc(var(--pos-left) - 40%);
+        top: calc(var(--pos-top) - 10%);
+        transform: 
+            translate(-50%, -50%) 
+            rotate(var(--current-rotation,540deg)) 
+            scale(var(--current-scale,1.4)); 
+        opacity: 0.9;
+        /* filter: brightness(1.4) contrast(1.2) blur(1px); */
+    }
+    
+    45% {
+        /* Centro + rotação extremamente rápida */
+        left: calc(var(--pos-left) - 60%);
+        top: calc(var(--pos-top) - 15%);
+        transform: 
+            translate(-50%, -50%) 
+            rotate(var(--current-rotation,1080deg)) 
+            scale(var(--current-scale,1.3)); 
+        opacity: 0.8;
+        /* filter: brightness(1.6) contrast(1.3) blur(1.5px); */
+    }
+    
+    60% {
+        /* Saindo + rotação ainda muito rápida */
+        left: calc(var(--pos-left) - 90%);
+        top: calc(var(--pos-top) - 20%);
+        transform: 
+            translate(-50%, -50%) 
+            rotate(var(--current-rotation,1620deg)) 
+            scale(var(--current-scale,1.1));
+        opacity: 0.6;
+        /* filter: brightness(1.3) contrast(1.2) blur(2px); */
+    }
+    
+    75% {
+        /* Velocidade máxima + rotação contínua */
+        left: calc(var(--pos-left) - 150%);
+        top: calc(var(--pos-top) - 30%);
+        transform: 
+            translate(-50%, -50%) 
+            rotate(var(--current-rotation,2160deg))
+            scale(var(--current-scale,0.9)); 
+        opacity: 0.4;
+        /* filter: brightness(0.8) contrast(1.0) blur(3px); */
+    }
+    
+    90% {
+        /* Quase fora + rotação final */
+        left: calc(var(--pos-left) - 250%);
+        top: calc(var(--pos-top) - 45%);
+        transform: 
+            translate(-50%, -50%) 
+            rotate(var(--current-rotation,2520deg))
+            scale(var(--current-scale,0.7)); 
+        opacity: 0.2;
+        /* filter: brightness(0.5) contrast(0.9) blur(4px); */
+    }
+    
+    100% {
+        /* Totalmente fora */
+        left: calc(var(--pos-left) - 400%);
+        top: calc(var(--pos-top) - 80%);
+        transform: 
+            translate(-50%, -50%) 
+            rotate(var(--current-rotation,2880deg)) 
+            scale(var(--current-scale,0.1));
+        opacity: 0;
+        visibility: hidden;
+        /* filter: brightness(0.3) contrast(0.8) blur(6px); */
+    }
+}
+
+
+
+
+/* Debug dos Blocos  Containers */
+/* .container{border:3px solid  darkorchid;}
+.container__question{border:3px solid red;}
+.container__input{border:2px solid mediumslateblue;}
+.container__botoes{border:2px solid pink;}
+.container__conteudo{border:2px solid pink;}
+.container__informacoes{border:2px solid greenyellow;}
+.container__question{border: black 4px solid;}
+.container__texto{border:2px solid green;} */
+
+/* Debug dos Elementos */
+/* .robo{border:2px solid red;}
+.background{border:5px solid pink;}
+.terra{border:2px solid green;}
+.lua{border:2px solid green;}
+.lua_terra{border: 2px solid pink;} */
+
+/* Debug Elementos de Texto */
+/* h1,p {border: solid pink 2px;} */
+
+
+
+/* TODO Pensar Responsividade */
+/* Definições Pre-existentes*/
+@media screen and (max-width: 1250px) {
+
+    h1 {
+        font-size: 50px;
+    }
+
+    .container__botao {
+        font-size: 16px;
+    }
+
+    .texto__paragrafo {
+        font-size: 24px;
+    }
+
+    .container__imagem-robo {
+        display: none;
+        object-fit: contain;
+    }
+
+    .container__conteudo {
+        display: block;
+        position: inherit;
+    }
+
+    .container__informacoes {
+        padding: 1rem
+    }
+}
+
+/* Fundir Blocos para maior controle */
+/* #textoNoQuadro {
+    display: flex;
+    flex-wrap: wrap;  
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    white-space: pre-line;
+    font-size: clamp(12px, 2vw, 36px);
+    line-height: 1.2;
+    text-align: left;
+    white-space: pre-line;
+} */
+
+/* .container__question {
+    width: 100%;
+    max-width: 100%;
+    height: auto;   
+    min-height: 0;
+    display: flex;
+    flex-direction: column;  
+    gap: 1rem;
+    box-sizing: border-box;
+    padding: 0.75rem; 
+} */

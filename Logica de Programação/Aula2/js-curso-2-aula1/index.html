@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:,">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>JS Game</title>
+</head>
+
+<body>
+    <!-- Background -->
+    <div class="background">
+        <div class="lua_terra orbita">
+            <img src="./img/old/earth.png" alt="Terra: Lar doce lar" class="terra orbita" />
+            <img src="./img/old/lua.png" alt="Arrido e Frio" class="lua orbita" />
+        </div>
+    </div>
+    <!-- Background -->
+    <!-- Conteúdo Principal -->
+    <div class="container">
+        <!-- Margem Transparente -->
+        <div class="container__conteudo">
+            <div class="container__informacoes">
+                <div class="container__question">
+                    <!-- Questão -->
+                    <div class="container__texto">
+                        <h1>Texto Principal</h1>
+                        <p class="texto__paragrafo">Texto Secundário</p>
+
+                        <!-- Campo de Entrada -->
+                        <input type="number" min="1" max="10" class="container__input">
+                        <!-- Campo de Entrada -->
+
+                    </div>
+                    <!-- Questão -->
+                </div>
+                <!-- Botões -->
+                <div class="chute container__botoes">
+                    <button onclick="" id="jogar" class="container__botao">Jogar</button>
+                    <button onclick="" id="sair" class="container__botao">Sair</button>
+                </div>
+                <!-- Botões -->
+            </div>
+            <!-- Adversário -->
+            <img src="./img/old/robo.png" alt="Uma robo olhando para a esquerda" class="robo" />
+
+        </div>
+        <!-- Margem Transparente -->
+    </div>
+    <!-- Conteúdo Principal -->
+
+    <!-- TODO Controle De Volume Glabal e Agradecimentos -->
+    <script src="app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+body {
+    background: linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+body::before {
+    background-image: url("img/code.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+}
+
+.container {
+    width: 1200px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 24px;
+    border: 1px solid #1875E8;
+    box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15);
+    background-image: url("img/Ruido.png");
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.container__conteudo {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+}
+
+.container__informacoes {
+    flex: 1;
+    padding: 20px;
+}
+
+.container__botao {
+    border-radius: 16px;
+    background: #1875E8;
+    padding: 16px 24px;
+    width: 100%;
+    font-size: 24px;
+    font-weight: 700;
+    border: none;
+    margin-top: 16px;
+}
+
+.container__texto {
+    margin: 16px 0 16px 0;
+}
+
+.container__texto-azul {
+    color: #1875E8;
+}
+
+h1 {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 72px;
+}
+
+h2,
+p,
+button {
+    font-family: 'Inter', sans-serif;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 400;
+}
+
+/* Sem drag'n'drop */
+* {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+
+/* Animar a Interação com Robo */
+.animated-robot{
+  display: inline-block;
+  transform-origin: right left;
+  animation: oscilar 0.1s infinite ease-in-out;
+  filter: drop-shadow(6px 6px 8px rgba(0,0,0,0.4));
+}
+
+/* Transição psicodélica entre right e default color -> Final feliz */
+.you-wrong-robot{
+    filter: hue-rotate(-270deg) brightness(1.1) saturate(1.4); /* Vermelho ? */
+}
+
+/* Transição psicodélica entre wrong e default color -> Final Esperado */
+.you-right-robot{
+    filter: hue-rotate(-160deg) brightness(1.1) saturate(1.4); /* Verde ? */
+}
+
+@keyframes robotRage {
+  0%   { transform: rotate(-1deg); }
+  2%   { transform: translateX(0); }
+  11%  { transform: translateX(0) rotate(-1deg); }
+  23%  { transform: translateX(1px) rotate(-1deg); }
+  25%  { transform: translateX(1px); }
+  26%  { transform: rotate(-2deg); }
+  45%  { transform: translateX(-2px) rotate(-1deg); }
+  50%  { transform: translateX(0); }
+  55%  { transform: rotate(2deg); }
+  66%  { transform: translateX(2px) rotate(1deg); }
+  75%  { transform: translateX(-1px); }
+  78%  { transform: rotate(-3deg); }
+  81%  { transform: translateX(-1px) rotate(-2deg); }
+  94%  { transform: rotate(0deg); }
+  97%  { transform: translateX(0) rotate(0deg); }
+  100% { transform: translateX(0); }
+}
+
+
+/* Earth Destruction */
+.flash {
+  position: absolute;
+  border-radius: 50%; /* Tornando a imagem circular */
+  transition: opacity 0.5s ease-out;
+  background: rgba(255, 255, 255, 0.8);
+  opacity: 0;
+  animation: flashEffect 3s infinite; /*forwards;*/
+}
+
+@keyframes flashEffect {
+  0% {
+    opacity: 0;
+  }
+    20% {
+    opacity: 1;
+    filter: brightness(4);
+  }
+  50% {
+    opacity: 1;
+    filter: brightness(3);
+}
+  100% {
+    opacity: 0;
+}
+}
